@@ -67,17 +67,17 @@ signupBtn1.addEventListener('click', (e) => {
 
   // display the problem solved status
   let leetCodeId = document.getElementById("leetcodeId").value;
-  let username = leetCodeId;
+  // let username = leetCodeId;
   chrome.storage.sync.set({ username });
   console.log('username: ' + leetCodeId);
   fetch(`https://salty-waters-49462.herokuapp.com/leetcode-stats-six.vercel.app/api?username=${leetCodeId}&theme=dark`, { 'Access-Control-Allow-Origin': '*' })
     .then(response => response.text())
     .then(data => {
       console.log(data);
-      chrome.storage.sync.get('username', ({ name }) => {
-        console.log('name: ', name)
-        document.getElementById('username').innerHTML = name;
-      });
+      // chrome.storage.sync.get('username', ({ name }) => {
+      //   console.log('name: ', name)
+      //   document.getElementById('username').innerHTML = name;
+      // });
       document.getElementById("stats").innerHTML = data;
       document.getElementById("getQuestion").click();
     }).catch((err) => {
