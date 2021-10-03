@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="button.css">
+</head>
+
+<body>
+  <div class="form-structor">
+    <div class="signup" id="signupDiv">
+      <h2 class="form-title" id="signup">Log In</h2>
+      <div class="form-holder">
+        <input type="text" class="input" id="leetcodeId" name="leetcodeId" placeholder="Enter LeetCode Id" />
+      </div>
+      <button class="submit-btn" id="submit-btn-signup">Log in</button>
+    </div>
+    <div class="login slide-up" id="loginDiv" style="visibility:hidden">
+
+      <div class="center">
+        <h6 id="login" style="text-align:center; cursor: pointer; margin-top: -5%" >Not <span id="username">Ashish </span>?</h6>
+        <div>
+          <div id="leetCodeStats"></div>
+          <div id="stats"></div>
+          
+          <div class="wrapper">
+            1. Select the Difficulty
+          </div>
+          <div class="toggle_radio">
+            <input type="radio" class="toggle_option" id="first_toggle" name="difficulty" value="Easy">
+            <input type="radio" checked class="toggle_option" id="second_toggle" name="difficulty" value="Medium">
+            <input type="radio" class="toggle_option" id="third_toggle" name="difficulty" value="Hard">
+            <input type="radio" class="toggle_option" id="fourth_toggle" name="difficulty" value="Random">
+            <label for="first_toggle">Easy</label>
+            <label for="second_toggle">Medium</label>
+            <label for="third_toggle">Hard</label>
+            <label for="fourth_toggle">Random</label>
+            <div class="toggle_option_slider">
+            </div>
+          </div><br>
+          <div class="wrapper">
+            2. Select the Topic
+          </div>
+          <select id="topic" class="popup-topic">
+            <option value="array" selected="selected">Arrays</option>
+            <option value="string">String</option>
+            <option value="dynamic-programming">Dynamic programming</option>
+            <option value="hash-table">Hash Table</option>
+            <option value="binary-tree">Binary Tree</option>
+            <option value="tree">Tree</option>
+            <option value="binary-search-tree">Binary Search Tree</option>
+            <option value="recursion">Recursion</option>
+            <option value="backtracking">Backtracking</option>
+            <option value="graph">Graph</option>
+            <option value="linked-list">Linked List</option>
+            <option value="trie">Trie</option>
+            <option value="all">All</option>
+          </select>
+          <button class="data-type-btn" id="getQuestion">GO</button>
+        </div>
+
+      </div>
+      <div class="card">
+        <div class="card-text">
+          <div class="portada">
+
+          </div>
+          <div class="title-total">
+            <div class="title">
+              <a id="problemURL" href="https://www.ashish-kumar.com/" style="display: none" target="_blank">Solve on
+                LeetCode</a>
+            </div>
+            <div>Problem: <span id="question" style="font-weight: bold"></span></div> <br>
+            <div>Difficulty: <span id="difficulty" style="font-weight: bold"></span></div> <br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
