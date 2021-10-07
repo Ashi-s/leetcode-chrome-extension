@@ -57,9 +57,8 @@ svg{
   bottom: 0;
   left: 0;
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 500px;
-  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100");
+  background-size: 600px;
+  background-image: url("https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit");
 }
 .form-structor .signup {
   position: absolute;
@@ -104,7 +103,6 @@ svg{
   border-radius: 15px;
   background-color: #fff;
   overflow: hidden;
-  margin-top: 50px;
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.3s ease;
@@ -471,5 +469,96 @@ button {
 }
 
 .login h6:hover {
-  color: rgb(245, 200, 0);
+  color: #ca871c;
+}
+
+.help a:hover{
+  color: #f5c800;
+}
+.invalidCreds {
+  text-align: center;
+  color: #ca871c;
+  font-weight: bold;
+  font-size: larger;
+  display: none;
+}
+
+.loader {
+  display: none;
+  top: 75%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  border: 5px solid #ccc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-top-color: #265766;
+  border-left-color: #265766;
+  animation: spin 1s infinite ease-in;
+}
+
+.loader1 {
+  display: none;
+  top: 75%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.loading1 {
+  border: 5px solid #ccc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-top-color: #265766;
+  border-left-color: #265766;
+  animation: spin 1s infinite ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Portfolio */
+.fa-link {
+  
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  
+  color: white;
+}
+.fa-github {
+  
+  color: white;
+}
+.fa-linkedin {
+  
+  color: white;
 }

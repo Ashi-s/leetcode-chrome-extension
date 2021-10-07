@@ -2,21 +2,33 @@
 
 <head>
   <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="form-structor">
     <div class="signup" id="signupDiv">
+      <div style="font-weight:bolder ;" >
+        <h2>Code Daily with LeetCode</h2>
+      </div>
       <h2 class="form-title" id="signup">Log In</h2>
+      <p  class = "invalidCreds" id="invalidCreds"></p>
       <div class="form-holder">
         <input type="text" class="input" id="leetcodeId" name="leetcodeId" placeholder="Enter LeetCode Id" />
       </div>
       <button class="submit-btn" id="submit-btn-signup">Log in</button>
+      <a id="help" style="text-align:center; cursor: pointer; margin-top: -3%;color: #fdfdfd; margin-left: 35%;"  href="https://leetcode.com/profile/account/" target="_blank" >Need Help?</a>
+      <div style="margin-left: 15%;">
+        <a href="https://github.com/Ashi-s" target="_blank" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/ashi-s/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://twitter.com/meashishkmr" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://ashish-kumar.com" target="_blank" class="fa fa-link"></a>
+      </div>
     </div>
     <div class="login slide-up" id="loginDiv" style="visibility:hidden">
 
       <div class="center">
-        <h6 id="login" style="text-align:center; cursor: pointer; margin-top: -5%" >Not <span id="username">You </span>?</h6>
+        <h6 id="login" style=" font-size:small; text-align:center; cursor: pointer; margin-top: -5%;" >Not <span id="username">You </span>?</h6>
         <div>
           <div id="leetCodeStats"></div>
           <div id="stats"></div>
@@ -55,6 +67,9 @@
             <option value="all">All</option>
           </select>
           <button class="data-type-btn" id="getQuestion">GO</button>
+          <div class="loader1">
+            <div class="loading1"></div>
+          </div>
         </div>
 
       </div>
@@ -75,7 +90,9 @@
         </div>
       </div>
     </div>
-
+    <div class="loader">
+      <div class="loading"></div>
+    </div>
     <script src="popup.js"></script>
 </body>
 

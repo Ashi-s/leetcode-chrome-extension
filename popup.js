@@ -11,6 +11,7 @@ function setPageBackgroundColor() {
 //generate random question
 let getQuestion = document.getElementById("getQuestion");
 getQuestion.addEventListener("click", async () => {
+  document.getElementsByClassName("loader1")[0].style.display = "block";
   var e = document.getElementById("topic");
   var topic = e.value;
 
@@ -41,6 +42,7 @@ getQuestion.addEventListener("click", async () => {
       let size = filteredquestions.length;
       let randomQuestion = Math.floor(Math.random() * size);
       var problemURL = `https://leetcode.com/problems/${filteredquestions[randomQuestion].titleSlug}`;
+      document.getElementsByClassName("loader1")[0].style.display = "none";
       document.getElementById("problemURL").setAttribute("href", problemURL);
       document.getElementById("problemURL").style.display = "";
       document.getElementById("question").innerHTML = filteredquestions[randomQuestion].title;
@@ -60,11 +62,8 @@ const signupBtn1 = document.getElementById('submit-btn-signup');
 signupBtn1.addEventListener('click', (e) => {
   var signupDiv = document.getElementById("signupDiv");
   var loginDiv = document.getElementById("loginDiv");
-  signupDiv.classList.add("slide-up");
-  loginDiv.classList.remove("slide-up");
-  document.getElementById("loginDiv").style.visibility = "visible";
-  document.getElementById("signupDiv").style.visibility = "hidden";
-
+  document.getElementById("getQuestion").click();
+  document.getElementsByClassName("loader")[0].style.display = "block";
   // display the problem solved status
   let leetCodeId = document.getElementById("leetcodeId").value;
   // let username = leetCodeId;
@@ -78,8 +77,21 @@ signupBtn1.addEventListener('click', (e) => {
       //   console.log('name: ', name)
       //   document.getElementById('username').innerHTML = name;
       // });
-      document.getElementById("stats").innerHTML = data;
-      document.getElementById("getQuestion").click();
+      if (leetCodeId.length <=0 || data === 'Username does not exist') {
+        document.getElementsByClassName("loader")[0].style.display = "none";
+        document.getElementById("invalidCreds").innerHTML = 'Invalid LeetCode Id';
+        document.getElementsByClassName("invalidCreds")[0].style.display = "block";
+      }
+      else{
+        document.getElementById("stats").innerHTML = data;
+        signupDiv.classList.add("slide-up");
+        loginDiv.classList.remove("slide-up");
+        document.getElementById("loginDiv").style.visibility = "visible";
+        document.getElementById("signupDiv").style.visibility = "hidden";
+        document.getElementsByClassName("loader")[0].style.display = "none";
+        document.getElementsByClassName("invalidCreds")[0].style.display = "none";
+      }
+
     }).catch((err) => {
       document.getElementById("stats").innerHTML = err;
       console.log('error: ', err);
