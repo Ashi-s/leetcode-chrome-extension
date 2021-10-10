@@ -4,7 +4,7 @@ A chrome extension built to motivate you to solve a coding problem daily, as sim
 
 ## How to use this chrome extension
 
-- You can either clone this GitHub repo or download it from the chrome web store(currently under review)
+- You can either clone this GitHub repo or download it from the chrome web store [Click Me](https://chrome.google.com/webstore/detail/code-daily-with-leetcode/klbnllgaegjdpipfjlgbcocjjpnkedhp?hl=en)
   ```sh
   git clone https://github.com/Ashi-s/leetcode-chrome-extension.git
   ```
