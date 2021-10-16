@@ -14,7 +14,10 @@ getQuestion.addEventListener("click", async () => {
   document.getElementsByClassName("loader1")[0].style.display = "block";
   var e = document.getElementById("topic");
   var topic = e.value;
-
+  if (topic === "all"){
+    var allTopics = ["array", "string", "dynamic-programming", "hash-table", "binary-tree", "tree", "binary-search-tree", "recursion", "backtracking", "graph", "linked-list", "trie"];
+    topic = allTopics[Math.floor(Math.random() * allTopics.length)];
+  }
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -47,6 +50,7 @@ getQuestion.addEventListener("click", async () => {
       document.getElementById("problemURL").style.display = "";
       document.getElementById("question").innerHTML = filteredquestions[randomQuestion].title;
       document.getElementById("difficulty").innerHTML = difficulty;
+      document.getElementById("topic1").innerHTML = topic;
       // document.getElementById("acRate").innerHTML = filteredquestions[randomQuestion].acRate;
       // document.getElementById("desc").style.visibility = "hidden";
     })
