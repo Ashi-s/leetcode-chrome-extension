@@ -1,7 +1,7 @@
-![Graduation Mona](images/code-daily-1280X800.png)
+![Code Daily with LeetCode](images/logo.png)
 # leetcode-chrome-extension
 A chrome extension built to motivate you to solve a coding problem daily, as simple as name of the extension **Code Daily with LeetCode**
-
+![Code Daily with LeetCode](images/code-daily-1280X800.png)
 ## How to use this chrome extension
 
 - You can either clone this GitHub repo or download it from the chrome web store [Click Me](https://chrome.google.com/webstore/detail/code-daily-with-leetcode/klbnllgaegjdpipfjlgbcocjjpnkedhp?hl=en)
